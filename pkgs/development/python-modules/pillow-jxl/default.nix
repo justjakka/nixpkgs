@@ -62,6 +62,6 @@ buildPythonPackage rec {
     description = "Pillow plugin for JPEG-XL, using Rust for bindings";
     homepage = "https://github.com/Isotr0py/pillow-jpegxl-plugin";
     license = lib.licenses.gpl3Only;
-    maintainers = with lib.maintainers; [ ];
+    maintainers = with maintainers; [ jakka ];
   };
 }
