@@ -1135,11 +1135,7 @@ self: super: with self; {
 
   audiotools = callPackage ../development/python-modules/audiotools { };
 
-  audit = toPythonModule (
-    pkgs.audit.override {
-      python3Packages = self;
-    }
-  );
+  audit = toPythonModule (pkgs.audit.override { python3Packages = self; });
 
   auditok = callPackage ../development/python-modules/auditok { };
 
@@ -1844,9 +1840,7 @@ self: super: with self; {
 
   beetcamp = callPackage ../development/python-modules/beetcamp { };
 
-  beets = callPackage ../development/python-modules/beets {
-    inherit (pkgs) chromaprint;
-  };
+  beets = callPackage ../development/python-modules/beets { inherit (pkgs) chromaprint; };
 
   beets-alternatives = callPackage ../development/python-modules/beets-alternatives { };
 
@@ -1856,9 +1850,7 @@ self: super: with self; {
 
   beets-filetote = callPackage ../development/python-modules/beets-filetote { };
 
-  beets-minimal = beets.override {
-    disableAllPlugins = true;
-  };
+  beets-minimal = beets.override { disableAllPlugins = true; };
 
   beewi-smartclim = callPackage ../development/python-modules/beewi-smartclim { };
 
@@ -3441,9 +3433,7 @@ self: super: with self; {
 
   datadog = callPackage ../development/python-modules/datadog { };
 
-  datafusion = callPackage ../development/python-modules/datafusion {
-    protoc = pkgs.protobuf;
-  };
+  datafusion = callPackage ../development/python-modules/datafusion { protoc = pkgs.protobuf; };
 
   datalad = callPackage ../development/python-modules/datalad { };
 
@@ -3707,9 +3697,7 @@ self: super: with self; {
 
   dfdiskcache = callPackage ../development/python-modules/dfdiskcache { };
 
-  dftd4 = callPackage ../by-name/df/dftd4/python.nix {
-    inherit (pkgs) dftd4;
-  };
+  dftd4 = callPackage ../by-name/df/dftd4/python.nix { inherit (pkgs) dftd4; };
 
   diagrams = callPackage ../development/python-modules/diagrams { };
 
@@ -4300,9 +4288,7 @@ self: super: with self; {
 
   dm-sonnet = callPackage ../development/python-modules/dm-sonnet { };
 
-  dm-tree = callPackage ../development/python-modules/dm-tree {
-    inherit (pkgs) abseil-cpp;
-  };
+  dm-tree = callPackage ../development/python-modules/dm-tree { inherit (pkgs) abseil-cpp; };
 
   dmenu-python = callPackage ../development/python-modules/dmenu { };
 
@@ -4655,9 +4641,7 @@ self: super: with self; {
 
   ecdsa = callPackage ../development/python-modules/ecdsa { };
 
-  echo = callPackage ../development/python-modules/echo {
-    inherit (pkgs) mesa;
-  };
+  echo = callPackage ../development/python-modules/echo { inherit (pkgs) mesa; };
 
   ecoaliface = callPackage ../development/python-modules/ecoaliface { };
 
@@ -6060,11 +6044,7 @@ self: super: with self; {
 
   gntp = callPackage ../development/python-modules/gntp { };
 
-  gnucash = toPythonModule (
-    pkgs.gnucash.override {
-      python3 = python;
-    }
-  );
+  gnucash = toPythonModule (pkgs.gnucash.override { python3 = python; });
 
   gnureadline = callPackage ../development/python-modules/gnureadline { };
 
@@ -6451,9 +6431,7 @@ self: super: with self; {
 
   gspread = callPackage ../development/python-modules/gspread { };
 
-  gssapi = callPackage ../development/python-modules/gssapi {
-    krb5-c = pkgs.krb5;
-  };
+  gssapi = callPackage ../development/python-modules/gssapi { krb5-c = pkgs.krb5; };
 
   gst-python = callPackage ../development/python-modules/gst-python {
     # inherit (pkgs) meson won't work because it won't be spliced
@@ -6476,11 +6454,7 @@ self: super: with self; {
 
   guessit = callPackage ../development/python-modules/guessit { };
 
-  guestfs = toPythonModule (
-    pkgs.libguestfs.override {
-      python3 = python;
-    }
-  );
+  guestfs = toPythonModule (pkgs.libguestfs.override { python3 = python; });
 
   guidance = callPackage ../development/python-modules/guidance { };
 
@@ -6629,9 +6603,7 @@ self: super: with self; {
 
   hdbscan = callPackage ../development/python-modules/hdbscan { };
 
-  hdf5plugin = callPackage ../development/python-modules/hdf5plugin {
-    inherit (pkgs) zstd lz4;
-  };
+  hdf5plugin = callPackage ../development/python-modules/hdf5plugin { inherit (pkgs) zstd lz4; };
 
   hdfs = callPackage ../development/python-modules/hdfs { };
 
@@ -7474,9 +7446,7 @@ self: super: with self; {
 
   jaxlib-bin = callPackage ../development/python-modules/jaxlib/bin.nix { };
 
-  jaxlib-build = callPackage ../development/python-modules/jaxlib {
-    snappy-cpp = pkgs.snappy;
-  };
+  jaxlib-build = callPackage ../development/python-modules/jaxlib { snappy-cpp = pkgs.snappy; };
 
   jaxopt = callPackage ../development/python-modules/jaxopt { };
 
@@ -8250,11 +8220,7 @@ self: super: with self; {
 
   libais = callPackage ../development/python-modules/libais { };
 
-  libapparmor = toPythonModule (
-    pkgs.libapparmor.override {
-      python3Packages = self;
-    }
-  );
+  libapparmor = toPythonModule (pkgs.libapparmor.override { python3Packages = self; });
 
   libarchive-c = callPackage ../development/python-modules/libarchive-c {
     inherit (pkgs) libarchive;
@@ -8821,9 +8787,7 @@ self: super: with self; {
 
   llmx = callPackage ../development/python-modules/llmx { };
 
-  llvmlite = callPackage ../development/python-modules/llvmlite {
-    inherit (pkgs) cmake ninja;
-  };
+  llvmlite = callPackage ../development/python-modules/llvmlite { inherit (pkgs) cmake ninja; };
 
   lm-eval = callPackage ../development/python-modules/lm-eval { };
 
@@ -9087,9 +9051,7 @@ self: super: with self; {
 
   marisa = callPackage ../development/python-modules/marisa { inherit (pkgs) marisa; };
 
-  marisa-trie = callPackage ../development/python-modules/marisa-trie {
-    marisa-cpp = pkgs.marisa;
-  };
+  marisa-trie = callPackage ../development/python-modules/marisa-trie { marisa-cpp = pkgs.marisa; };
 
   markdown = callPackage ../development/python-modules/markdown { };
 
@@ -9793,9 +9755,7 @@ self: super: with self; {
 
   mpl-scatter-density = callPackage ../development/python-modules/mpl-scatter-density { };
 
-  mpl-typst = callPackage ../development/python-modules/mpl-typst {
-    inherit (pkgs) typst;
-  };
+  mpl-typst = callPackage ../development/python-modules/mpl-typst { inherit (pkgs) typst; };
 
   mplcursors = callPackage ../development/python-modules/mplcursors { };
 
@@ -11882,11 +11842,7 @@ self: super: with self; {
 
   piexif = callPackage ../development/python-modules/piexif { };
 
-  pigpio = toPythonModule (
-    pkgs.pigpio.override {
-      inherit buildPythonPackage;
-    }
-  );
+  pigpio = toPythonModule (pkgs.pigpio.override { inherit buildPythonPackage; });
 
   pijuice = callPackage ../development/python-modules/pijuice { };
 
@@ -11921,6 +11877,8 @@ self: super: with self; {
   pillow-heif = callPackage ../development/python-modules/pillow-heif { };
 
   pillow-jpls = callPackage ../development/python-modules/pillow-jpls { };
+
+  pillow-jxl = callPackage ../development/python-modules/pillow-jxl { };
 
   pillowfight = callPackage ../development/python-modules/pillowfight { };
 
@@ -13236,13 +13194,9 @@ self: super: with self; {
 
   pygls = pygls_1;
 
-  pygls_1 = callPackage ../development/python-modules/pygls/1.nix {
-    lsprotocol = lsprotocol_2023;
-  };
+  pygls_1 = callPackage ../development/python-modules/pygls/1.nix { lsprotocol = lsprotocol_2023; };
 
-  pygls_2 = callPackage ../development/python-modules/pygls/2.nix {
-    lsprotocol = lsprotocol_2025;
-  };
+  pygls_2 = callPackage ../development/python-modules/pygls/2.nix { lsprotocol = lsprotocol_2025; };
 
   pygltflib = callPackage ../development/python-modules/pygltflib { };
 
@@ -13821,9 +13775,7 @@ self: super: with self; {
 
   pyopencl = callPackage ../development/python-modules/pyopencl { };
 
-  pyopengl = callPackage ../development/python-modules/pyopengl {
-    inherit (pkgs) mesa;
-  };
+  pyopengl = callPackage ../development/python-modules/pyopengl { inherit (pkgs) mesa; };
 
   pyopengl-accelerate = callPackage ../development/python-modules/pyopengl-accelerate { };
 
@@ -13965,9 +13917,7 @@ self: super: with self; {
   pyppmd = callPackage ../development/python-modules/pyppmd { };
 
   pyprecice = callPackage ../development/python-modules/pyprecice {
-    precice = pkgs.precice.override {
-      python3Packages = self;
-    };
+    precice = pkgs.precice.override { python3Packages = self; };
   };
 
   pypresence = callPackage ../development/python-modules/pypresence { };
@@ -14028,9 +13978,7 @@ self: super: with self; {
 
   pyqt5-multimedia = self.pyqt5.override { withMultimedia = true; };
 
-  pyqt5-sip = callPackage ../development/python-modules/pyqt/sip.nix {
-    inherit (pkgs) mesa;
-  };
+  pyqt5-sip = callPackage ../development/python-modules/pyqt/sip.nix { inherit (pkgs) mesa; };
 
   pyqt5-stubs = callPackage ../development/python-modules/pyqt5-stubs { };
 
@@ -14039,17 +13987,11 @@ self: super: with self; {
   # `propagatedBuildInputs` may cause collisions.
   pyqt5-webkit = self.pyqt5.override { withWebKit = true; };
 
-  pyqt6 = callPackage ../development/python-modules/pyqt/6.x.nix {
-    inherit (pkgs) mesa;
-  };
+  pyqt6 = callPackage ../development/python-modules/pyqt/6.x.nix { inherit (pkgs) mesa; };
 
-  pyqt6-charts = callPackage ../development/python-modules/pyqt6-charts {
-    inherit (pkgs) mesa;
-  };
+  pyqt6-charts = callPackage ../development/python-modules/pyqt6-charts { inherit (pkgs) mesa; };
 
-  pyqt6-sip = callPackage ../development/python-modules/pyqt/pyqt6-sip.nix {
-    inherit (pkgs) mesa;
-  };
+  pyqt6-sip = callPackage ../development/python-modules/pyqt/pyqt6-sip.nix { inherit (pkgs) mesa; };
 
   pyqt6-webengine = callPackage ../development/python-modules/pyqt6-webengine {
     inherit (pkgs) mesa;
@@ -14085,9 +14027,7 @@ self: super: with self; {
 
   pyqtgraph = callPackage ../development/python-modules/pyqtgraph { };
 
-  pyqtwebengine = callPackage ../development/python-modules/pyqtwebengine {
-    inherit (pkgs) mesa;
-  };
+  pyqtwebengine = callPackage ../development/python-modules/pyqtwebengine { inherit (pkgs) mesa; };
 
   pyquaternion = callPackage ../development/python-modules/pyquaternion { };
 
@@ -14165,9 +14105,7 @@ self: super: with self; {
 
   pyregion = callPackage ../development/python-modules/pyregion { };
 
-  pyrender = callPackage ../development/python-modules/pyrender {
-    inherit (pkgs) mesa;
-  };
+  pyrender = callPackage ../development/python-modules/pyrender { inherit (pkgs) mesa; };
 
   pyrepetierng = callPackage ../development/python-modules/pyrepetierng { };
 
@@ -15462,9 +15400,7 @@ self: super: with self; {
 
   pytweening = callPackage ../development/python-modules/pytweening { };
 
-  pytz = callPackage ../development/python-modules/pytz {
-    inherit (pkgs) tzdata;
-  };
+  pytz = callPackage ../development/python-modules/pytz { inherit (pkgs) tzdata; };
 
   pytz-deprecation-shim = callPackage ../development/python-modules/pytz-deprecation-shim { };
 
@@ -15674,9 +15610,7 @@ self: super: with self; {
 
   qgrid = callPackage ../development/python-modules/qgrid { };
 
-  qh3 = callPackage ../development/python-modules/qh3 {
-    inherit (pkgs) cmake;
-  };
+  qh3 = callPackage ../development/python-modules/qh3 { inherit (pkgs) cmake; };
 
   qiling = callPackage ../development/python-modules/qiling { };
 
@@ -16320,9 +16254,7 @@ self: super: with self; {
 
   roonapi = callPackage ../development/python-modules/roonapi { };
 
-  root = callPackage ../development/python-modules/root {
-    inherit (pkgs) root;
-  };
+  root = callPackage ../development/python-modules/root { inherit (pkgs) root; };
 
   rope = callPackage ../development/python-modules/rope { };
 
@@ -19706,9 +19638,7 @@ self: super: with self; {
 
   unique-log-filter = callPackage ../development/python-modules/unique-log-filter { };
 
-  units-llnl = callPackage ../development/python-modules/units-llnl {
-    inherit (pkgs) units-llnl;
-  };
+  units-llnl = callPackage ../development/python-modules/units-llnl { inherit (pkgs) units-llnl; };
 
   unittest-data-provider = callPackage ../development/python-modules/unittest-data-provider { };
 
