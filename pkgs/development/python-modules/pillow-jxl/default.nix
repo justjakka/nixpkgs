@@ -2,13 +2,19 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+
+  # build-system
   cargo,
   cmake,
   pkg-config,
   rustPlatform,
   rustc,
+
+  # native dependencies
   packaging,
   pillow,
+
+  # optional dependencies
   numpy,
   py3exiv2,
   pytest,
@@ -41,6 +47,7 @@ buildPythonPackage rec {
     rustc
   ];
 
+  # cmake is used only to compile rust library dependency
   dontUseCmakeConfigure = true;
 
   dependencies = [
@@ -58,10 +65,10 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "pillow_jxl" ];
 
-  meta = {
+  meta = with lib; {
     description = "Pillow plugin for JPEG-XL, using Rust for bindings";
     homepage = "https://github.com/Isotr0py/pillow-jpegxl-plugin";
-    license = lib.licenses.gpl3Only;
+    license = licenses.gpl3Only;
     maintainers = with maintainers; [ jakka ];
   };
 }
